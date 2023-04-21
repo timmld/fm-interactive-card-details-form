@@ -45,6 +45,11 @@
 
         window.DD_RUM &&
         window.DD_RUM.startSessionReplayRecording();
+        
+        window.DD_RUM && window.DD_RUM.addAction('init', {
+            'measure': Math.floor(Math.random() * 1000) + 1,
+            'facet': (Math.floor(Math.random() * 1000) + 1).toString()
+        })
     </script>
 </head>
 <body>
