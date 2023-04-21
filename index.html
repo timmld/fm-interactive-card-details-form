@@ -35,6 +35,13 @@
           forwardErrorsToLogs: true,
           sessionSampleRate: 100,
         });
+        
+        window.DD_RUM && window.DD_RUM.setUser({
+            id: (Math.floor(Math.random() * 1000) + 1).toString(),
+            name: 'John Doe',
+            email: 'john@doe.com',
+            plan: 'premium'
+        });
 
         window.DD_RUM &&
         window.DD_RUM.startSessionReplayRecording();
